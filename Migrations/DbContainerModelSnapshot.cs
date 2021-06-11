@@ -39,6 +39,28 @@ namespace BackendUsers.Migrations
                     b.ToTable("Department");
                 });
 
+            modelBuilder.Entity("BackendUsers.Models.Entities.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<float>("Salary")
+                        .HasColumnType("real");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Employee");
+                });
+
             modelBuilder.Entity("BackendUsers.Models.Entities.PaymentDetails", b =>
                 {
                     b.Property<int>("PaymentId")

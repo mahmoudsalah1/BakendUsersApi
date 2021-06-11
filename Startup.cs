@@ -1,4 +1,8 @@
+using BackendUsers.BL.Interfaces;
+using BackendUsers.BL.Mapper;
+using BackendUsers.BL.Repository;
 using BackendUsers.Models.Database;
+using BackendUsers.Models.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +38,9 @@ namespace BackendUsers
             //DbContainer
             services.AddDbContextPool<DbContainer>(opts => opts.UseSqlServer(Configuration.GetConnectionString("UsersConnection")));
 
+            services.AddAutoMapper(x => x.AddProfile(new DomainProfile()));
+            services.AddScoped<IEmployeeRepo,EmployeeRep>();
+           
             //identity
             services.AddIdentity<IdentityUser,IdentityRole>(options =>
             {
@@ -116,6 +123,7 @@ namespace BackendUsers
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }

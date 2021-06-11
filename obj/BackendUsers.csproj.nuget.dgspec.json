@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj": {}
+    "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj": {}
   },
   "projects": {
-    "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj": {
+    "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
+        "projectUniqueName": "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
         "projectName": "BackendUsers",
-        "projectPath": "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
+        "projectPath": "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
         "packagesPath": "C:\\Users\\Softlaptop\\.nuget\\packages\\",
-        "outputPath": "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\obj\\",
+        "outputPath": "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Softlaptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.6, )"

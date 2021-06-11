@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BackendUsers.Models;
 
 namespace BackendUsers.Models.Database
 {
@@ -16,7 +17,9 @@ namespace BackendUsers.Models.Database
 
         public DbSet<PaymentDetails> PaymentDetails { get; set; }
         public DbSet<Department> Department { get; set; }
-        
+        //public DbSet<BackendUsers.Models.EmployeeVM> EmployeeVM { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+
 
     }
 }

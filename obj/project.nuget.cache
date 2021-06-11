@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rmnv+LYuUtZT4nwpol/XRrF/gZqVeVwFMzsXNacyZroupovHlHhAzT9hIeLsoGh+UY7xvmaTVHSlYEhwE5DgkA==",
+  "dgSpecHash": "j+1sQU/e8Grs6XWRQlB4bB6FLxA244TlE90muoK2kLQeI7viGrjLZIH6JCBkZcSNjlC4U8evkL0QsxQcWcpLOQ==",
   "success": true,
-  "projectFilePath": "D:\\front end ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
+  "projectFilePath": "D:\\frontend ahmed elgendy\\backend\\asp.net core\\demos\\BackendUsers\\BackendUsers.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Softlaptop\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Softlaptop\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.6\\microsoft.aspnetcore.authentication.jwtbearer.5.0.6.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",
@@ -106,7 +108,7 @@
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Softlaptop\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

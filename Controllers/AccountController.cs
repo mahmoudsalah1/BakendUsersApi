@@ -32,45 +32,45 @@ namespace BackendUsers.Controllers
         [Route("Register")]
         public async Task<ActionResult> Register(Registeration model)
         {
-            if (ModelState.IsValid)
-            {
-                var data = new IdentityUser()
-                {
-                    UserName = model.Email,
-                };
-
-                var res = await userManager.CreateAsync(data, model.Password);
-
-                if (res.Succeeded)
-                {
-                    return Ok(res);
-                }
-                else
-                {
-                    foreach (var item in res.Errors)
-                    {
-                        ModelState.AddModelError("register error", item.Description);
-                    }
-                }
-            }
-            return Ok(model);
-
-
-            //var data = new IdentityUser()
+            //if (ModelState.IsValid)
             //{
-            //    UserName = model.Email
-            //};
+            //    var data = new IdentityUser()
+            //    {
+            //        UserName = model.Email,
+            //    };
 
-            //try
-            //{
             //    var res = await userManager.CreateAsync(data, model.Password);
-            //    return Ok(res);
-            //}
-            //catch (Exception)
-            //{
 
-            //    throw;
+            //    if (res.Succeeded)
+            //    {
+            //        return Ok(res);
+            //    }
+            //    else
+            //    {
+            //        foreach (var item in res.Errors)
+            //        {
+            //            ModelState.AddModelError("register error", item.Description);
+            //        }
+            //    }
             //}
+            //return Ok(model);
+
+
+            var data = new IdentityUser()
+            {
+                UserName = model.Email
+            };
+
+            try
+            {
+                var res = await userManager.CreateAsync(data, model.Password);
+                return Ok(res);
+            }
+            catch (Exception)
+            {
+
+                return Ok(model);
+            }
 
         }
 
@@ -112,19 +112,19 @@ namespace BackendUsers.Controllers
 
         // }
 
-       
+
 
 
         [HttpPost, Route("login")]
         public async Task<ActionResult> Login([FromBody] Login user)
         {
-            var res = await signInManager.PasswordSignInAsync(user.Email, user.Password, true, false);  ////??????????????????
+            var res = await signInManager.PasswordSignInAsync(user.Email, user.Password, false, false);  
 
-            if (user == null)   //
+            if (!res.Succeeded)  
             {
                 return BadRequest("Invalid client request");
             }
-            if (true)  ///////?  user.Email == "mahmoudsalah088@gmail.comm" && user.Password == "123"
+            if (res.Succeeded)  
             {
                 var secretKey =  new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
                 var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
@@ -133,7 +133,7 @@ namespace BackendUsers.Controllers
                     issuer: "http://localhost:4200",
                     audience: "http://localhost:4200",
                     claims: new List<Claim>(),
-                    expires: DateTime.Now.AddMinutes(5),
+                    expires: DateTime.Now.AddMinutes(50),
                     signingCredentials: signinCredentials
                 );
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
